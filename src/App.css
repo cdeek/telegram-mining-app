@@ -1,0 +1,60 @@
+.top-glow {
+  box-shadow: 0 -26px 20px rgba(243, 186, 47, 0.3);
+}
+
+.progress1[value] {
+  --w: 200px; /* the width*/
+  --color:  /* the progress color */
+    linear-gradient(90deg,#ff6161,#1ecd1e) 0/var(--w);
+  --background: lightgrey; /* the background color */
+
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  width: 80%;
+  border-radius: 10em;
+  background: var(--background);
+}
+.progress1[value]::-webkit-progress-bar {
+  border-radius: 10em;
+  background: var(--background);
+}
+.progress1[value]::-webkit-progress-value {
+  border-radius: 10em;
+  background: var(--color);
+}
+.progress1[value]::-moz-progress-bar {
+  border-radius: 10em;
+  background: var(--color);
+}
+
+.progress2[value] {
+  --color: linear-gradient(to right, #90ef89, #d692dd, #726edd);;
+  --background: lightgrey; /* the background color */
+
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  /* (1) */
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  width: 100%;
+  /* */
+  border-radius: 50%;
+  overflow: hidden;
+  background: var(--background);
+  transform: rotate(-90deg); /* (2) */
+  -webkit-mask: radial-gradient(#0000 59%,#000 60% 70%,#0000 71%) /* (3) */
+}
+.progress2[value]::-webkit-progress-bar {
+  background: var(--background);
+}
+.progress2[value]::-webkit-progress-value {
+  background: var(--color);
+}
+.progress2[value]::-moz-progress-bar {
+  background: var(--color);
+}
